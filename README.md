@@ -1,59 +1,107 @@
-# Indexa
+# Indexa - Agenda de Contatos em Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.11.
+Este projeto foi desenvolvido utilizando a versão moderna do **Angular** (componentes *standalone* e controle de fluxo `@for`), com o objetivo de exibir e filtrar uma lista alfabética de contatos a partir de uma fonte de dados em JSON.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Tecnologias Utilizadas
 
-```bash
-ng serve
-```
+* **Angular 17+**: Framework principal com uso de componentes *standalone* e novas diretivas de controle de fluxo.
+* **TypeScript**: Tipagem estática para garantia da estrutura dos dados.
+* **HTML5 & CSS3**: Estruturação semântica e estilização customizada.
+* **JSON**: Armazenamento estático da base de dados dos contatos (`agenda.json`).
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 📁 Estrutura do Projeto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+```text
+indexa/
+├── public/
+│   ├── logo.png
+│   └── banner.png
+├── src/
+│   ├── app/
+│   │   ├── componentes/
+│   │   │   ├── cabecalho/       # Componente do cabeçalho da aplicação
+│   │   │   ├── container/       # Componente contêiner principal com <ng-content>
+│   │   │   ├── contato/         # Componente para exibição individual do contato
+│   │   │   └── separador/       # Componente agrupador por letra inicial
+│   │   ├── agenda.json          # Fonte de dados em formato JSON
+│   │   ├── app.component.html   # Template principal com os loops @for
+│   │   ├── app.component.ts     # Lógica de filtragem e importação de componentes
+│   │   └── app.component.css    # Estilos globais/locais do App
+│   ├── main.ts                  # Ponto de entrada do Angular
+│   └── styles.css               # Estilos globais
+└── angular.json                 # Configurações do CLI e assets públicos
+# Indexa - Agenda de Contatos em Angular
 
-```bash
-ng generate component component-name
-```
+Este projeto foi desenvolvido utilizando a versão moderna do **Angular** (componentes *standalone* e controle de fluxo `@for`), com o objetivo de exibir e filtrar uma lista alfabética de contatos a partir de uma fonte de dados em JSON.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🚀 Tecnologias Utilizadas
 
-## Building
+* **Angular 17+**: Framework principal com uso de componentes *standalone* e novas diretivas de controle de fluxo.
+* **TypeScript**: Tipagem estática para garantia da estrutura dos dados.
+* **HTML5 & CSS3**: Estruturação semântica e estilização customizada.
+* **JSON**: Armazenamento estático da base de dados dos contatos (`agenda.json`).
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 📁 Estrutura do Projeto
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+```text
+indexa/
+├── public/
+│   ├── logo.png
+│   └── banner.png
+├── src/
+│   ├── app/
+│   │   ├── componentes/
+│   │   │   ├── cabecalho/       # Componente do cabeçalho da aplicação
+│   │   │   ├── container/       # Componente contêiner principal com <ng-content>
+│   │   │   ├── contato/         # Componente para exibição individual do contato
+│   │   │   └── separador/       # Componente agrupador por letra inicial
+│   │   ├── agenda.json          # Fonte de dados em formato JSON
+│   │   ├── app.component.html   # Template principal com os loops @for
+│   │   ├── app.component.ts     # Lógica de filtragem e importação de componentes
+│   │   └── app.component.css    # Estilos globais/locais do App
+│   ├── main.ts                  # Ponto de entrada do Angular
+│   └── styles.css               # Estilos globais
+└── angular.json                 # Configurações do CLI e assets públicos# Indexa - Agenda de Contatos em Angular
 
-## Running unit tests
+Este projeto foi desenvolvido utilizando a versão moderna do **Angular** (componentes *standalone* e controle de fluxo `@for`), com o objetivo de exibir e filtrar uma lista alfabética de contatos a partir de uma fonte de dados em JSON.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## 🚀 Tecnologias Utilizadas
 
-## Running end-to-end tests
+* **Angular 17+**: Framework principal com uso de componentes *standalone* e novas diretivas de controle de fluxo.
+* **TypeScript**: Tipagem estática para garantia da estrutura dos dados.
+* **HTML5 & CSS3**: Estruturação semântica e estilização customizada.
+* **JSON**: Armazenamento estático da base de dados dos contatos (`agenda.json`).
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
-```
+## 📁 Estrutura do Projeto
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```text
+indexa/
+├── public/
+│   ├── logo.png
+│   └── banner.png
+├── src/
+│   ├── app/
+│   │   ├── componentes/
+│   │   │   ├── cabecalho/       # Componente do cabeçalho da aplicação
+│   │   │   ├── container/       # Componente contêiner principal com <ng-content>
+│   │   │   ├── contato/         # Componente para exibição individual do contato
+│   │   │   └── separador/       # Componente agrupador por letra inicial
+│   │   ├── agenda.json          # Fonte de dados em formato JSON
+│   │   ├── app.component.html   # Template principal com os loops @for
+│   │   ├── app.component.ts     # Lógica de filtragem e importação de componentes
+│   │   └── app.component.css    # Estilos globais/locais do App
+│   ├── main.ts                  # Ponto de entrada do Angular
+│   └── styles.css               # Estilos globais
+└── angular.json                 # Configurações do CLI e assets públicos
