@@ -39,6 +39,7 @@ indexa/
 │   └── styles.css               # Estilos globais
 │
 └── angular.json                 # Configurações do Angular CLI e assets públicos
+```
 ## ⚙️ Funcionalidades
 
 ### 📋 Leitura Dinâmica de JSON
