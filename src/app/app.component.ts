@@ -1,46 +1,54 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms'; // 1. Adicionado para o ngModel funcionar
 
 import { ContainerComponent } from './componentes/container/container.component';
 import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component';
 import { SeparadorComponent } from './componentes/separador/separador.component';
 import { ContatoComponent } from './componentes/contato/contato.component';
-
-// 2. Import do novo componente de formulário
 import { FormularioContatoComponent } from './paginas/formulario-contato/formulario-contato.component';
 
+import { Contato } from './componentes/contato/contato';
 import agenda from './agenda.json';
-
-interface Contato {
-  id: number;
-  nome: string;
-  telefone: string;
-}
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    CommonModule,
+    FormsModule,
     RouterOutlet,
-    FormsModule,                // 3. Incluído no imports
-    FormularioContatoComponent, // 4. Incluído no imports
     ContainerComponent,
     CabecalhoComponent,
     SeparadorComponent,
-    ContatoComponent
+    ContatoComponent,
+    FormularioContatoComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  alfabeto: string = 'abcdefghijklmnopqrstuvwxyz';
   contatos: Contato[] = agenda;
-  filtroPorTexto: string = ''; // 5. Variável que estava faltando para a busca
+  filtroPorTexto: string = '';
+  alfabeto: string = 'abcdefghijklmnopqrstuvwxyz';
+
+  private removerAcentos(texto: string): string {
+    return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  filtrarContatosPorTexto(): Contato[] {
+    if (!this.filtroPorTexto) {
+      return this.contatos;
+    }
+    return this.contatos.filter(contato => {
+      return this.removerAcentos(contato.nome.toLowerCase()).includes(this.removerAcentos(this.filtroPorTexto.toLowerCase()));
+    });
+  }
 
   filtrarContatosPorLetraInicial(letra: string): Contato[] {
-    return this.contatos.filter(contato => {
-      return contato.nome.toLowerCase().startsWith(letra);
+    return this.filtrarContatosPorTexto().filter(contato => {
+      return this.removerAcentos(contato.nome.toLowerCase()).startsWith(this.removerAcentos(letra.toLowerCase()));
     });
   }
 }
