@@ -35,7 +35,6 @@
     {"id": 33, "nome": "Quirino", "telefone": "34 377667996"},
     {"id": 34, "nome": "Queila", "telefone": "58 710806340"},
     {"id": 35, "nome": "Rafael", "telefone": "52 794950878"},
-    {"id": 35, "nome": "Rafael Sanabria Zibordi", "telefone": "18 99721-1826"},
     {"id": 36, "nome": "Renata", "telefone": "48 881351523"},
     {"id": 37, "nome": "Sérgio", "telefone": "36 725382335"},
     {"id": 38, "nome": "Sandra", "telefone": "46 945695132"},
@@ -53,5 +52,9 @@
     {"id": 50, "nome": "Yasmin", "telefone": "69 433926906"},
     {"id": 51, "nome": "Zacarias", "telefone": "23 296915638"},
     {"id": 52, "nome": "Zuleica", "telefone": "30 674550130"},
-    {"id": 53, "nome": "Domingos C Villela", "telefone": "18 912344321"}
+    {"id": 53, "nome": "Domingos C Villela", "telefone": "18 912344321"},
+    {"id": 54, "nome": "Vinicius", "telefone": "18 997374460"},
+    {"id": 55, "nome": "Rafael Augusto B. de Souza", "telefone": "18 991050371"},
+    {"id": 56, "nome": "Vitor Spornraft", "telefone": "18 996308999"},
+    {"id": 57, "nome": "Maria Victoria S.", "telefone": "18 998010403"}
 ]
