@@ -16,3 +16,10 @@ body {
   min-height: 100vh;
   font-family: 'Montserrat', sans-serif;
 }
+
+/* Reset de listas para tirar os pontinhos no projeto todo */
+ul, ol, li {
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+}

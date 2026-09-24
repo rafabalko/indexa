@@ -1,11 +1,18 @@
 <app-container>
   <app-cabecalho></app-cabecalho>
 
-  <input 
-    type="search" 
-    placeholder="Digite para buscar" 
-    [(ngModel)]="filtroPorTexto"
-  />
+  <app-formulario-contato></app-formulario-contato>
+
+  <app-separador></app-separador>
+
+  <section class="busca-container">
+    <input 
+      type="search" 
+      placeholder="Digite para buscar" 
+      aria-label="Buscar contatos"
+      [(ngModel)]="filtroPorTexto"
+    />
+  </section>
 
   @for (letra of alfabeto; track letra) {
     @if (filtrarContatosPorLetraInicial(letra).length > 0) {

@@ -214,7 +214,36 @@ figure {
   margin: 0 0 16px 0;
 }
 
-/* Ajuste de responsividade para celulares */
+.contato ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  list-style: none !important;
+  box-sizing: border-box;
+}
+
+.contato ul li {
+  list-style: none !important;
+  color: #212529;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  word-break: break-word;
+}
+
+.contato ul li button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsividade Mobile */
 @media (max-width: 480px) {
   .botoes {
     flex-direction: column-reverse;
@@ -228,5 +257,9 @@ figure {
 
   input#aniversario {
     width: 100%;
+  }
+
+  .contato ul li {
+    font-size: 15px;
   }
 }
